@@ -94,11 +94,12 @@
       <p>Neste mapa, o que mais chama atenção são Curitiba e Londrina, com Curitiba bem à frente. Comparando com o mapa anterior, os maiores círculos aparecem nos municípios de maior porte, como Maringá, Ponta Grossa, Cascavel e os vizinhos de Curitiba. Ou seja, os municípios com mais habitantes tendem a ter mais internações.</p>
 
       <h2>Resultados</h2>
-      <p>Cada mapa responde a uma pergunta diferente: o primeiro, a qual região pertence cada município; o segundo, em que posição cada município está quanto ao porte; o terceiro, quantas internações houve em cada município. Se pudesse entregar só um, eu escolheria o terceiro, mas perderia a informação do porte, que ajuda a comparar com o número de internações.</p>
+      <p>Os três mapas mostram que o símbolo precisa acompanhar o tipo de dado. No mapa das regiões, a cor diferencia as seis regiões sem sugerir que uma vale mais que a outra. No mapa de porte, os tons do claro ao escuro mostram a ordem das classes sem precisar consultar a legenda. No mapa de internações, o tamanho permite comparar quantidades.</p>
+      <p>Mas cada símbolo também tem um limite. Na cor, percebi que seis categorias já chegam perto do limite visual: com uma categoria a mais, a nova cor ficaria parecida com alguma das que já foram usadas. Usando versões mais escuras das cores, daria para chegar a cerca de 10, mas com o risco de sugerir uma ordem entre elas. No claro e escuro, dá para ver a posição de cada município, mas o valor exato se perde ao separar a população em classes. Já no tamanho, o resultado depende do método de escala escolhido.</p>
 
       <h2>Limitações</h2>
-      <p>Esse tipo de mapa indica onde há mais internações, mas não onde a população está mais exposta ao risco. Para fazer essa comparação, seria preciso relacionar as internações com a população de cada município, usando uma taxa.</p>
-      <p>Mas uma taxa não costuma ser representada por círculos proporcionais: um município pequeno com taxa alta ganharia um círculo maior que o de Curitiba, o que faria parecer que ali há mais internações, quando na verdade há poucos casos. Esse é um assunto para um próximo post.</p>
+      <p>O mapa de internações usa o número total porque o objetivo aqui era mostrar o tamanho como variável visual. Como visto na <a href="hierarquia-visual.html">Publicação 01</a>, esse número acompanha o tamanho da população, então o mapa não serve para comparar o risco entre municípios.</p>
+      <p>No mapa de porte, defini manualmente os limites das classes em 10 mil, 50 mil e 200 mil habitantes. Com outros limites, alguns municípios mudariam de classe e de tom, e o mapa poderia passar outra impressão sobre o porte dos municípios do estado. A forma de definir as classes é o tema da próxima publicação.</p>
     </div>
   </article>
 </main>
