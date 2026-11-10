@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hierarquia visual no mapa de internações do Paraná · Vanessa Silva</title>
+  <meta name="description" content="Três versões do mesmo mapa de internações por doenças do aparelho circulatório no Paraná, com hierarquia visual diferente.">
+  <link rel="icon" href="../favicon.png">
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="largura">
+    <a href="https://vanessasilva-cs.github.io/portfolio/"><img src="../images/assinatura.png" alt="V. Silva"></a>
+    <nav>
+      <a href="../index.html">GeoDS</a>
+      <a href="https://vanessasilva-cs.github.io/portfolio/">Portfólio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="publicacao">
+    <div class="largura texto">
+      <a class="voltar" href="../index.html#modulo-01">&larr; GeoDS · Módulo 01</a>
+
+      <h1>Hierarquia visual no mapa de internações do Paraná</h1>
+      <p class="meta">Módulo 01 · Cartografia · Atividade 01 · agosto de 2026</p>
+
+      <p>Mapeei a taxa de internações por doenças do aparelho circulatório nos 399 municípios do Paraná em 2025 e fiz três versões do mesmo mapa. Os dados, as classes e as cores são os mesmos. O que muda é o peso dos contornos e a saturação das classes mais baixas.</p>
+      <p>A hierarquia visual é a ordem em que os elementos do mapa são percebidos. O dado precisa ser a figura, e o restante (contornos, rótulos) precisa ficar no fundo, dando contexto.</p>
+
+      <table>
+        <tr><th>Dados</th><td>Internações por doenças do aparelho circulatório (CID-10, cap. IX), DATASUS/SIH, 2025; população residente, 2025; malha municipal do IBGE, 2025</td></tr>
+        <tr><th>Método</th><td>Taxa por 10 mil habitantes; classificação por quantil em 5 classes; rampa de uma cor</td></tr>
+        <tr><th>Ferramentas</th><td>QGIS</td></tr>
+        <tr><th>Projeção</th><td>SIRGAS 2000 / UTM 22S (EPSG:31982)</td></tr>
+      </table>
+
+      <h2>Taxa por 10 mil habitantes</h2>
+      <p>O número de internações acompanha a população, então Curitiba sempre apareceria no topo. A taxa por 10 mil habitantes permite comparar municípios de tamanhos diferentes. Como a taxa vai de menos a mais, usei uma rampa de uma cor só, do claro ao escuro.</p>
+      <p>Antes de montar o mapa, defini a ordem de leitura que eu queria: primeiro o título, depois a taxa nos municípios e, por último, os nomes que ajudam a localizar cada região do estado.</p>
+
+      <h2>Contornos</h2>
+      <p>As versões A e B diferem só no contorno dos municípios. Para comparar, olhei cada uma por cinco segundos e anotei o que percebi primeiro.</p>
+
+      <figure>
+        <img src="../images/hierarquia-visual/versao-a.png" alt="Mapa do Paraná com a taxa de internações por município, contornos cinza-claros e finos.">
+        <figcaption>Versão A: contornos cinza-claros, 0,08 mm.</figcaption>
+      </figure>
+
+      <p>Na versão A, percebo primeiro os municípios das regiões imediatas do IBGE, que estão rotulados, e depois as taxas mais altas.</p>
+
+      <figure>
+        <img src="../images/hierarquia-visual/versao-b.png" alt="O mesmo mapa com contornos pretos e grossos.">
+        <figcaption>Versão B: contornos pretos, 0,40 mm.</figcaption>
+      </figure>
+
+      <p>Na versão B, a malha municipal aparece antes do dado. Só depois vem a taxa de internação, e os nomes dos municípios ficam difíceis de ler. Com 399 municípios de formas irregulares, o contorno ocupa boa parte do mapa, e quando ele é forte passa a competir com a cor.</p>
+
+      <h2>Saturação das classes baixas</h2>
+      <p>Na versão C, parti da versão A e reduzi a saturação das duas classes mais baixas, sem mudar os limites das classes.</p>
+
+      <figure>
+        <img src="../images/hierarquia-visual/versao-c.png" alt="Mapa com contornos finos e as duas classes mais baixas em tons menos saturados.">
+        <figcaption>Versão C: a versão A com as duas classes mais baixas menos saturadas.</figcaption>
+      </figure>
+
+      <p>As classes mais altas ficaram mais destacadas e a malha não compete por atenção.</p>
+
+      <h2>Resultados</h2>
+      <p>Para um relatório, eu escolheria a versão C. A diferença entre as classes altas e baixas fica mais evidente, e o contorno dos municípios fica no fundo.</p>
+
+      <h2>Limitações</h2>
+      <p>A hierarquia visual esconde a diferença de confiabilidade estatística entre municípios grandes e pequenos. O mapa ficou mais fácil de ler, mas não ficou mais correto.</p>
+      <p>Anahy tem a maior taxa do estado, 528,44 por 10 mil habitantes, com 2.971 habitantes e 157 internações. Em um município desse tamanho, poucas internações a mais ou a menos mudam bastante a taxa. No mapa, ele recebe a mesma cor de municípios muito maiores, em que a taxa é mais estável.</p>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="largura">© 2026 Vanessa Silva</div>
+</footer>
+
+</body>
+</html>
