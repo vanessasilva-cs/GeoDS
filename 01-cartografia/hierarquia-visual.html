@@ -52,7 +52,7 @@
         <figcaption>Versão A: contornos cinza-claros, 0,08 mm.</figcaption>
       </figure>
 
-      <p>Na versão A, percebo primeiro os municípios das regiões imediatas do IBGE, que estão rotulados, e depois as taxas mais altas.</p>
+      <p>Na versão A, percebo primeiro as taxas de internação e depois os nomes dos municípios rotulados.</p>
 
       <figure>
         <img src="../images/hierarquia-visual/versao-b.png" alt="O mesmo mapa com contornos pretos e grossos.">
@@ -65,11 +65,18 @@
       <p>Na versão C, parti da versão A e reduzi a saturação das duas classes mais baixas, sem mudar os limites das classes.</p>
 
       <figure>
-        <img src="../images/hierarquia-visual/versao-c.png" alt="Mapa com contornos finos e as duas classes mais baixas em tons menos saturados.">
-        <figcaption>Versão C: a versão A com as duas classes mais baixas menos saturadas.</figcaption>
+        <div class="comparar" style="--pos: 50%">
+          <img src="../images/hierarquia-visual/versao-c.png" alt="Mapa com contornos finos e as duas classes mais baixas em tons menos saturados.">
+          <img class="comparar-topo" src="../images/hierarquia-visual/versao-a.png" alt="" aria-hidden="true">
+          <span class="comparar-rotulo esq">A</span>
+          <span class="comparar-rotulo dir">C</span>
+          <div class="comparar-linha" aria-hidden="true"></div>
+          <input type="range" min="0" max="100" value="50" aria-label="Arraste para comparar a versão A com a versão C">
+        </div>
+        <figcaption>Versão C: a versão A com as duas classes mais baixas menos saturadas. Arraste a barra para comparar com a versão A.</figcaption>
       </figure>
 
-      <p>As classes mais altas ficaram mais destacadas e a malha não compete por atenção, mas acabei diminuindo demais a saturação e, em um mapa com fundo branco, a menor classe quase não dá para ver.</p>
+      <p>A versão A já estava boa, mas diminuí a saturação para que as classes mais altas ficassem mais destacadas. Porém, acabei diminuindo demais e a menor classe compete com o fundo branco do mapa.</p>
 
       <h2>Resultados</h2>
       <p>Para um relatório, eu escolheria a versão C, ajustando novamente a saturação da classe mais baixa. Ainda assim, a diferença entre as classes altas e baixas fica mais evidente, e o contorno dos municípios fica no fundo.</p>
@@ -84,6 +91,8 @@
 <footer>
   <div class="largura">© 2026 Vanessa Silva</div>
 </footer>
+
+<script src="../js/mapas.js"></script>
 
 </body>
 </html>

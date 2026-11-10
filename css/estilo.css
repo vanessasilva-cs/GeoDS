@@ -135,6 +135,46 @@ footer { color: var(--suave); font-size: .9rem; padding: 28px 0 40px; }
 .publicacao .tabela-valores .num { text-align: right; }
 .publicacao .tabela-valores .destaque { background: rgba(90, 95, 46, .12); color: var(--verde); font-weight: 600; }
 
+/* Comparador de mapas (swipe) */
+.comparar { position: relative; border: 1px solid var(--linha); border-radius: 3px; overflow: hidden; background: #fff; user-select: none; }
+.publicacao .comparar img { border: 0; border-radius: 0; }
+.comparar .comparar-topo { position: absolute; inset: 0; width: 100%; height: 100%; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.comparar-linha { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--verde); pointer-events: none; }
+.comparar-linha::after {
+  content: "\2039\00a0\203A"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 34px; height: 34px; border-radius: 50%; background: var(--verde); color: var(--cartao);
+  font-size: 18px; line-height: 32px; text-align: center;
+}
+.comparar-rotulo {
+  position: absolute; top: 10px; padding: 2px 9px; border-radius: 3px; pointer-events: none;
+  background: rgba(46, 58, 39, .85); color: var(--cartao); font-size: 13px; letter-spacing: .08em;
+}
+.comparar-rotulo.esq { left: 10px; }
+.comparar-rotulo.dir { right: 10px; }
+.comparar input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
+.comparar:focus-within .comparar-linha { background: var(--oliva); }
+.comparar-ampliar {
+  position: absolute; right: 10px; bottom: 10px; z-index: 2; width: 34px; height: 34px; padding: 0;
+  border: 0; border-radius: 3px; background: rgba(46, 58, 39, .85); color: var(--cartao);
+  font-size: 20px; line-height: 34px; cursor: pointer;
+}
+.comparar-ampliar:hover, .comparar-ampliar:focus-visible { background: var(--oliva); }
+
+/* Ampliar mapa */
+.publicacao figure img.ampliavel { cursor: zoom-in; }
+.ampliar-fundo {
+  position: fixed; inset: 0; z-index: 100; background: rgba(20, 22, 16, .92);
+  display: flex; align-items: center; justify-content: center; padding: 2vh 2vw;
+}
+.ampliar-fundo[hidden] { display: none; }
+.ampliar-conteudo { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+.ampliar-conteudo > img { max-width: 100%; max-height: 100%; width: auto; height: auto; background: #fff; border-radius: 3px; }
+.ampliar-conteudo .comparar { flex: none; }
+.ampliar-fechar {
+  position: absolute; top: 10px; right: 14px; z-index: 3; width: 40px; height: 40px; padding: 0;
+  border: 0; background: none; color: #fff; font-size: 34px; line-height: 40px; cursor: pointer;
+}
+
 @media (max-width: 640px) {
   .topo nav { display: none; }
   .abertura { padding: 44px 0 32px; }
