@@ -26,13 +26,14 @@
       <a class="voltar" href="../index.html#modulo-01">&larr; GeoDS · Módulo 01</a>
 
       <h1>Hierarquia visual no mapa de internações do Paraná</h1>
-      <p class="meta">Módulo 01 · Cartografia · Atividade 01 · agosto de 2026</p>
+      <p class="meta">Módulo 01 · Cartografia · Publicação 01 · agosto de 2026</p>
 
+      <p>Comecei pela hierarquia visual porque ela é uma das bases da cartografia e muitas vezes fica de lado na hora de montar um mapa. Quando o peso de cada elemento não é pensado, como a espessura do contorno ou a intensidade das cores, o mapa pode passar uma informação diferente da que deveria, mesmo com os dados e a classificação corretos. Aqui, quis ver o quanto essas escolhas afetam o resultado final.</p>
       <p>Mapeei a taxa de internações por doenças do aparelho circulatório nos 399 municípios do Paraná em 2025 e fiz três versões do mesmo mapa, a fim de comparar o quanto o peso dos contornos e a saturação das classes mais baixas afetam a leitura do mapa. Os dados, as classes e as cores são os mesmos nas três versões.</p>
       <p>Hierarquia visual é a ordem em que lemos os elementos do mapa. O ideal é que o que queremos mostrar seja o primeiro a chamar atenção, ou seja, o dado que foi trabalhado. Para isso, os contornos e os rótulos devem ficar mais discretos.</p>
 
       <table>
-        <tr><th>Dados</th><td>Internações por doenças do aparelho circulatório (CID-10, cap. IX), DATASUS/SIH, 2025; população residente, 2025; malha municipal do IBGE, 2025</td></tr>
+        <tr><th>Dados</th><td>Internações por doenças do aparelho circulatório (CID-10, cap. IX), DATASUS/SIH, 2025; população residente, 2025; malha municipal do IBGE, 2025; pontos de referência dos polos das regiões geográficas imediatas, Paraná Interativo</td></tr>
         <tr><th>Método</th><td>Taxa por 10 mil habitantes; classificação por quantil em 5 classes; rampa de uma cor</td></tr>
         <tr><th>Ferramentas</th><td>QGIS</td></tr>
         <tr><th>Projeção</th><td>SIRGAS 2000 / UTM 22S (EPSG:31982)</td></tr>
@@ -76,9 +77,7 @@
       <h2>Limitações</h2>
       <p>Mesmo a taxa já sendo uma normalização, ainda sobra outro problema: a diferença de confiabilidade estatística entre municípios grandes e pequenos.</p>
       <p>Anahy, por exemplo, tem a maior taxa do estado, 528,44 por 10 mil habitantes, com 2.971 habitantes e 157 internações. Com 30 internações a menos, o que pode acontecer só por acaso de um ano para o outro, seriam 127 internações, e a taxa cairia para 427 por 10 mil, 100 pontos a menos. Em Curitiba, 30 internações a mais ou a menos quase não mudam a taxa.</p>
-      <p>Ou seja, em municípios pequenos, poucos casos mudam muito a taxa. Isso deixa as taxas extremas, para cima e para baixo, concentradas nos municípios pequenos.</p>
-      <p>O mapa ficou mais fácil de ler, mas não ficou mais correto.</p>
-    </div>
+      <p>Ou seja, em municípios pequenos, poucos casos mudam muito a taxa. Isso deixa as taxas extremas, para cima e para baixo, concentradas nos municípios pequenos.</p>    </div>
   </article>
 </main>
 
