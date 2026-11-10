@@ -1,6 +1,8 @@
 # GeoDS
 
-Curso de análise de dados espaciais que montei, com dados públicos. Cada atividade tem uma publicação com os mapas e as minhas anotações sobre método e escolhas.
+**Geospatial Data Science**
+
+Organizei o curso em módulos e atividades que terminam em mapas. Aqui publico os resultados, com as minhas anotações sobre os métodos e as escolhas.
 
 Site: https://vanessasilva-cs.github.io/GeoDS/
 

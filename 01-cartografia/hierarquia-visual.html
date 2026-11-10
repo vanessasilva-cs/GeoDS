@@ -28,8 +28,8 @@
       <h1>Hierarquia visual no mapa de internações do Paraná</h1>
       <p class="meta">Módulo 01 · Cartografia · Atividade 01 · agosto de 2026</p>
 
-      <p>Mapeei a taxa de internações por doenças do aparelho circulatório nos 399 municípios do Paraná em 2025 e fiz três versões do mesmo mapa. Os dados, as classes e as cores são os mesmos. O que muda é o peso dos contornos e a saturação das classes mais baixas.</p>
-      <p>A hierarquia visual é a ordem em que os elementos do mapa são percebidos. O dado precisa ser a figura, e o restante (contornos, rótulos) precisa ficar no fundo, dando contexto.</p>
+      <p>Mapeei a taxa de internações por doenças do aparelho circulatório nos 399 municípios do Paraná em 2025 e fiz três versões do mesmo mapa, a fim de comparar o quanto o peso dos contornos e a saturação das classes mais baixas afetam a leitura do mapa. Os dados, as classes e as cores são os mesmos nas três versões.</p>
+      <p>Hierarquia visual é a ordem em que lemos os elementos do mapa. O ideal é que o que queremos mostrar seja o primeiro a chamar atenção, ou seja, o dado que foi trabalhado. Para isso, os contornos e os rótulos devem ficar mais discretos.</p>
 
       <table>
         <tr><th>Dados</th><td>Internações por doenças do aparelho circulatório (CID-10, cap. IX), DATASUS/SIH, 2025; população residente, 2025; malha municipal do IBGE, 2025</td></tr>
@@ -39,8 +39,9 @@
       </table>
 
       <h2>Taxa por 10 mil habitantes</h2>
-      <p>O número de internações acompanha a população, então Curitiba sempre apareceria no topo. A taxa por 10 mil habitantes permite comparar municípios de tamanhos diferentes. Como a taxa vai de menos a mais, usei uma rampa de uma cor só, do claro ao escuro.</p>
-      <p>Antes de montar o mapa, defini a ordem de leitura que eu queria: primeiro o título, depois a taxa nos municípios e, por último, os nomes que ajudam a localizar cada região do estado.</p>
+      <p>O número de internações depende do tamanho da população: onde mora mais gente, há naturalmente mais internações. Então um mapa com o número total mostraria principalmente onde a população é maior. Por isso usei a taxa por 10 mil habitantes, que divide as internações pela população para diminuir o efeito do tamanho da população.</p>
+      <p>Como a taxa vai de menos a mais, usei uma rampa de uma cor só, do claro ao escuro.</p>
+      <p>Antes de montar o mapa, defini a ordem de leitura que eu queria: primeiro o título, depois a taxa nos municípios e, por último, os nomes dos principais municípios, para ajudar a localizar cada região do estado.</p>
 
       <h2>Contornos</h2>
       <p>As versões A e B diferem só no contorno dos municípios. Para comparar, olhei cada uma por cinco segundos e anotei o que percebi primeiro.</p>
@@ -57,7 +58,7 @@
         <figcaption>Versão B: contornos pretos, 0,40 mm.</figcaption>
       </figure>
 
-      <p>Na versão B, a malha municipal aparece antes do dado. Só depois vem a taxa de internação, e os nomes dos municípios ficam difíceis de ler. Com 399 municípios de formas irregulares, o contorno ocupa boa parte do mapa, e quando ele é forte passa a competir com a cor.</p>
+      <p>Na versão B, a malha municipal aparece antes da informação que eu quero transmitir. Só depois vem a taxa de internação, e os nomes dos municípios ficam difíceis de ler. Com 399 municípios de formas irregulares, o contorno ocupa boa parte do mapa, e quando ele é forte passa a competir com o restante.</p>
 
       <h2>Saturação das classes baixas</h2>
       <p>Na versão C, parti da versão A e reduzi a saturação das duas classes mais baixas, sem mudar os limites das classes.</p>
@@ -67,14 +68,16 @@
         <figcaption>Versão C: a versão A com as duas classes mais baixas menos saturadas.</figcaption>
       </figure>
 
-      <p>As classes mais altas ficaram mais destacadas e a malha não compete por atenção.</p>
+      <p>As classes mais altas ficaram mais destacadas e a malha não compete por atenção, mas acabei diminuindo demais a saturação e, em um mapa com fundo branco, a menor classe quase não dá para ver.</p>
 
       <h2>Resultados</h2>
-      <p>Para um relatório, eu escolheria a versão C. A diferença entre as classes altas e baixas fica mais evidente, e o contorno dos municípios fica no fundo.</p>
+      <p>Para um relatório, eu escolheria a versão C, ajustando novamente a saturação da classe mais baixa. Ainda assim, a diferença entre as classes altas e baixas fica mais evidente, e o contorno dos municípios fica no fundo.</p>
 
       <h2>Limitações</h2>
-      <p>A hierarquia visual esconde a diferença de confiabilidade estatística entre municípios grandes e pequenos. O mapa ficou mais fácil de ler, mas não ficou mais correto.</p>
-      <p>Anahy tem a maior taxa do estado, 528,44 por 10 mil habitantes, com 2.971 habitantes e 157 internações. Em um município desse tamanho, poucas internações a mais ou a menos mudam bastante a taxa. No mapa, ele recebe a mesma cor de municípios muito maiores, em que a taxa é mais estável.</p>
+      <p>Mesmo a taxa já sendo uma normalização, ainda sobra outro problema: a diferença de confiabilidade estatística entre municípios grandes e pequenos.</p>
+      <p>Anahy, por exemplo, tem a maior taxa do estado, 528,44 por 10 mil habitantes, com 2.971 habitantes e 157 internações. Com 30 internações a menos, o que pode acontecer só por acaso de um ano para o outro, seriam 127 internações, e a taxa cairia para 427 por 10 mil, 100 pontos a menos. Em Curitiba, 30 internações a mais ou a menos quase não mudam a taxa.</p>
+      <p>Ou seja, em municípios pequenos, poucos casos mudam muito a taxa. Isso deixa as taxas extremas, para cima e para baixo, concentradas nos municípios pequenos.</p>
+      <p>O mapa ficou mais fácil de ler, mas não ficou mais correto.</p>
     </div>
   </article>
 </main>
