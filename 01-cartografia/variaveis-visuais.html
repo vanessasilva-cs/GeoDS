@@ -6,7 +6,7 @@
   <title>Variáveis visuais em três mapas do Paraná · Vanessa Silva</title>
   <meta name="description" content="Três mapas do Paraná, cada um com a variável visual que combina com o tipo de dado: cor para regiões, claro e escuro para o porte dos municípios e tamanho para o número de internações.">
   <link rel="icon" href="../favicon.png">
-  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="../css/estilo.css?v=2026-11-10">
 </head>
 <body>
 
@@ -71,9 +71,9 @@
 
       <h2>Internações</h2>
       <p>O terceiro mapa mostra o número de internações por doenças do aparelho circulatório em cada município, em 2025. Aqui o dado é uma contagem: além de dizer qual município tem mais internações, dá para dizer quantas vezes mais e somar os valores de uma região, caso o valor de cada símbolo estivesse indicado no mapa. Para esse tipo de dado usei o tamanho, com um círculo no centro de cada município e os municípios em cinza-claro, como fundo. A ideia é que, quem olha um círculo com o dobro da área, entenda que ali há o dobro de internações.</p>
-      <p>Para essa leitura funcionar, é a área do círculo que precisa ser proporcional ao número de internações, e não o diâmetro. Por isso é preciso atenção ao método de escala escolhido no QGIS, que explico mais adiante. Londrina, por exemplo, tem cerca de metade das internações de Curitiba. Com a área proporcional, o círculo de Londrina tem metade da área do círculo de Curitiba. Se o diâmetro fosse proporcional, o círculo teria metade da largura, mas só um quarto da área, e Londrina pareceria ter bem menos internações do que tem.</p>
-      <p>Na prática, isso depende de como o tamanho é configurado no QGIS. O tamanho de cada círculo vem do número de internações do município e é definido em Propriedades da camada → Simbologia → Tamanho, no botão de substituição definida por dados, pela opção Assistente. É nessa janela que se escolhe o método de escala, ou seja, a regra que transforma o número de internações no tamanho do círculo. Há quatro opções: Raio, Superfície, Exponencial e Compensação de aparência. Fica a dica para quem usa o QGIS em português: a Compensação de aparência é o método Flannery, como aparece na versão em inglês e na literatura de cartografia. Quando percebi, já tinha usado o método Superfície.</p>
-      <p>Na mesma janela, além do método, se define a faixa de valores e a faixa de tamanhos. Usei valores de 0 a 16.580 internações, que é o número de Curitiba, e tamanhos de 0 a 20 mm. Começar as duas faixas em zero faz com que o tamanho do círculo dependa só da proporção entre os valores: um município com metade das internações de Curitiba fica com um círculo de metade da área. Se a faixa de valores começasse em 10, o menor valor da camada, Santa Inês ficaria com um círculo de 0 mm e sumiria do mapa. Além disso, entre um município com 20 internações e outro com 40, o segundo deveria ter um círculo com o dobro da área do primeiro, mas com a faixa começando em 10 ele ficaria com uma área 3 vezes maior. Começando em zero, a área fica com o dobro, como deve ser. Para o maior círculo considerei 20 mm, porque com um tamanho máximo menor os municípios com menos internações ficariam com círculos muito pequenos.</p>
+      <p>Para isso, é a área do círculo que precisa ser proporcional ao número de internações. Por isso é preciso atenção ao método de escala escolhido no QGIS, que explico mais adiante. Londrina, por exemplo, tem cerca de metade das internações de Curitiba. Com a área proporcional, o círculo de Londrina tem metade da área do círculo de Curitiba.</p>
+      <p>Portanto, isso depende de como o tamanho do símbolo é configurado no QGIS. O tamanho de cada círculo vem do número de internações do município e é definido em Propriedades da camada → Simbologia → Tamanho, no botão de substituição especificada de dado (campo), pela opção Assistente. É nessa janela que se escolhe o método de escala, ou seja, a regra que transforma o número de internações no tamanho do círculo. Há quatro opções: Raio, Superfície, Exponencial e Compensação de aparência. Fica a dica para quem usa o QGIS em português: a Compensação de aparência é o método Flannery, como aparece na versão em inglês e na literatura de cartografia. Quando percebi, já tinha usado o método Superfície.</p>
+      <p>Na mesma janela, além do método, se define a faixa de valores e a faixa de tamanhos. Usei valores de 0 a 16.580 internações, que é o maior valor dos dados, e tamanhos de 0 a 20 mm. Começar as duas faixas em zero faz com que o tamanho do círculo dependa só da proporção entre os valores: um município com metade das internações de Curitiba fica com um círculo de metade da área. Se a faixa de valores começasse em 10, o menor valor da camada, Santa Inês ficaria com um círculo de 0 mm e sumiria do mapa. Além disso, entre um município com 20 internações e outro com 40, o segundo deveria ter um círculo com o dobro da área do primeiro, mas com a faixa começando em 10 ele ficaria com uma área 3 vezes maior. Começando em zero, a área fica com o dobro, como deve ser. Para o maior círculo considerei 20 mm, porque com um tamanho máximo menor os municípios com menos internações ficariam com círculos muito pequenos.</p>
       <p>A tabela mostra o diâmetro que cada método atribui ao círculo de três municípios, usando as mesmas faixas de valores e de tamanhos. O tamanho que o QGIS calcula é sempre o diâmetro do círculo, por isso as diferenças de área entre os métodos são maiores do que os números sugerem.</p>
 
       <div class="tabela-valores">
@@ -118,7 +118,7 @@
   <div class="largura">© 2026 Vanessa Silva</div>
 </footer>
 
-<script src="../js/mapas.js"></script>
+<script src="../js/mapas.js?v=2026-11-10"></script>
 
 </body>
 </html>
