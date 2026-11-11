@@ -125,6 +125,14 @@ footer { color: var(--suave); font-size: .9rem; padding: 28px 0 40px; }
 .publicacao blockquote { margin: 1.6em 0; padding: .8em 1.1em; background: var(--cartao); border-left: 3px solid var(--oliva); border-radius: 0 3px 3px 0; }
 .publicacao blockquote > :first-child { margin-top: 0; }
 .publicacao blockquote > :last-child { margin-bottom: 0; }
+.publicacao .nota {
+  margin: 1.2em 0 1.6em; padding: 12px 16px; font-size: .86rem; line-height: 1.55;
+  background: var(--cartao); border-left: 3px solid var(--oliva); border-radius: 0 3px 3px 0;
+}
+.publicacao .nota dl { margin: 0; }
+.publicacao .nota dt { color: var(--verde); font-weight: 600; }
+.publicacao .nota dd { margin: 0 0 8px; text-align: justify; hyphens: none; -webkit-hyphens: none; }
+.publicacao .nota .fonte { margin: 8px 0 0; color: var(--suave); font-size: .92em; }
 .publicacao code { font-family: Consolas, "Cascadia Mono", monospace; font-size: .88em; background: var(--cartao); padding: .1em .35em; border-radius: 3px; }
 .publicacao .tabela-valores { margin: 1.6em 0; overflow-x: auto; background: var(--cartao); border: 1px solid var(--linha); border-radius: 4px; }
 .publicacao .tabela-valores table { display: table; margin: 0; font-variant-numeric: tabular-nums; }
